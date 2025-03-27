@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Error505Page from "./pages/Error505Page";
 import SecretLink from "./pages/SecretLink";
-import DivineStatic from "./breachedpages/src/pages/DivineStatic";
+import DivineStatic from "./pages/DivineStatic";
 import SecretMessage from "./pages/SecretMessage";
 import ChessMoves from "./pages/ChessMoves";
 
