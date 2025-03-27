@@ -24,7 +24,7 @@ const startReveal = 10; // Letters start appearing from 10th refresh
 const fullReveal = startReveal + hiddenPhrase.length; // Would be 30, but we'll prevent full reveal
 
 const getRandomCity = () => {
-  const cities = ["New York", "Tokyo", "Paris", "Berlin", "Sydney", "Mumbai", "London"];
+  const cities = ["JAIPUR"];
   return cities[Math.floor(Math.random() * cities.length)];
 };
 
