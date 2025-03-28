@@ -4,6 +4,7 @@ import SecretLink from "./pages/SecretLink";
 import DivineStatic from "./pages/DivineStatic";
 import SecretMessage from "./pages/SecretMessage";
 import ChessMoves from "./pages/ChessMoves";
+import SilentHorror from "./pages/SilentHorror";
 
 
 
@@ -23,6 +24,7 @@ function App() {
             <Route path="/divine" element={<div><DivineStatic/></div>} />
             <Route path="/message" element={<div><SecretMessage/></div>} />
             <Route path="/chess" element={<div><ChessMoves/></div>} />
+            <Route path="/silent" element={<div><SilentHorror/></div>} />
           </Routes>
       </main>
     </Router>
