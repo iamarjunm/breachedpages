@@ -5,11 +5,11 @@ import DivineStatic from "./pages/DivineStatic";
 import SecretMessage from "./pages/SecretMessage";
 import ChessMoves from "./pages/ChessMoves";
 import SilentHorror from "./pages/SilentHorror";
-
-
+import Dome from "./pages/home"
 
 const Home = () => (
   <>
+  <Dome />
   </>
 );
 
@@ -19,6 +19,7 @@ function App() {
     <Router>
       <main className="min-h-screen bg-white dark:bg-ieee-dark transition-colors duration-300">
           <Routes>
+           <Route path="/" element={<Home />} />
             <Route path="/error" element={<div><Error505Page/></div>} />
             <Route path="/secret" element={<div><SecretLink/></div>} />
             <Route path="/divine" element={<div><DivineStatic/></div>} />
@@ -30,12 +31,5 @@ function App() {
     </Router>
   );
 }
-console.log(`
-  _   _   _____   __     __  _____   ____    ___    ____  
- | \\ | | | ____|  \\ \\   / / | ____| |  _ \\  |_ _|  / ___| 
- |  \\| | |  _|     \\ \\ / /  |  _|   | |_) |  | |   \\___ \\ 
- | |\\  | | |___     \\ V /   | |___  |  _ <   | |    ___) |
- |_| \\_| |_____|     \\_/    |_____| |_| \\_\\ |___|  |____/ 
-`);
 
 export default App;
