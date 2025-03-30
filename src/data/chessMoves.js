@@ -48,7 +48,7 @@ const chessMoves = [
     "231. Bd5 Rc5", "232. Rg8 Rc2", "233. Rb8+ Ka5", "234. Bb3 Rc3", "235. Kd5 Rc7",
     "236. Kd4 Rd7+", "237. Bd5 Re7", "238. Rb2 Re8", "239. Rb7 Ka6", "240. Rb1 Ka5",
     "241. Bc4 Rd8+", "242. Kc3 Rh8", "243. Rb5+ Ka4", "244. Rb6 Rh3+", "245. Bd3 Rh5",
-    "246. Re6 Rg5", "247. Rh6 Rc5+", "248. Bc4 Rg5", "249. Ra6+ Ra5", "250. Rh6 Rg5",
+    "246. Re6 Rg5", "247. Rh7 Rc5+", "248. Bc4 Rg5", "249. Ra6+ Ra5", "250. Rh6 Rg5",
     "251. Rh4 Ka5", "252. Rh2 Rg3+", "253. Kd4 Rg5", "254. Bd5 Ka4", "255. Kc5 Rg3",
     "256. Ra2+ Ra3", "257. Rb2 Rg3", "258. Rh2 Rc3+", "259. Bc4 Rg3", "260. Rb2 Rg5+",
     "261. Bd5 Rg3", "262. Rh2 Rc3+", "263. Bc4 Rg3", "264. Rh8 Ka3", "265. Ra8+ Kb2",
