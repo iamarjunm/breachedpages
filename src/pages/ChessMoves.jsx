@@ -3,7 +3,6 @@ import chessMoves from "../data/chessMoves";
 
 const ChessMoves = () => {
   const [displayedMoves, setDisplayedMoves] = useState([]);
-  const [currentMoveIndex, setCurrentMoveIndex] = useState(0);
 
   // Piece symbols with modern aesthetic
   const getPieceSymbol = (move) => {
@@ -19,28 +18,20 @@ const ChessMoves = () => {
     const allMoves = chessMoves.flatMap(moveString => {
       const match = moveString.match(/(\d+)\. (\S+)(?: (\S+))?/);
       if (!match) return [];
-      
+
       const moveNumber = parseInt(match[1]);
       const whiteMove = match[2];
       const blackMove = match[3];
-      
+
       return [
         { number: moveNumber, player: 'white', move: whiteMove, piece: getPieceSymbol(whiteMove) },
         ...(blackMove ? [{ number: moveNumber, player: 'black', move: blackMove, piece: getPieceSymbol(blackMove) }] : [])
       ];
     });
 
-    const interval = setInterval(() => {
-      if (currentMoveIndex < allMoves.length) {
-        setDisplayedMoves(prev => [...prev, allMoves[currentMoveIndex]]);
-        setCurrentMoveIndex(prev => prev + 1);
-      } else {
-        clearInterval(interval);
-      }
-    }, 750); // Smooth animation speed
-
-    return () => clearInterval(interval);
-  }, [currentMoveIndex]);
+    // Set all moves instantly
+    setDisplayedMoves(allMoves);
+  }, []);
 
   return (
     <div className="min-h-screen bg-[#0f172a] flex flex-col items-center p-6 font-chess">
@@ -72,7 +63,7 @@ const ChessMoves = () => {
           {Array.from({ length: Math.ceil(displayedMoves.length / 2) }).map((_, groupIndex) => {
             const whiteMove = displayedMoves[groupIndex * 2];
             const blackMove = displayedMoves[groupIndex * 2 + 1];
-            
+
             return (
               <div 
                 key={groupIndex} 
@@ -84,7 +75,7 @@ const ChessMoves = () => {
                 <div className="col-span-1 text-center text-gray-500 font-mono">
                   {groupIndex + 1}.
                 </div>
-                
+
                 {/* White Move */}
                 <div className="col-span-5 pl-4">
                   {whiteMove && (
@@ -96,7 +87,7 @@ const ChessMoves = () => {
                     </div>
                   )}
                 </div>
-                
+
                 {/* Black Move */}
                 <div className="col-span-5 pl-4">
                   {blackMove && (
@@ -108,7 +99,7 @@ const ChessMoves = () => {
                     </div>
                   )}
                 </div>
-                
+
                 {/* Decorative Element */}
                 <div className="col-span-1 flex justify-center">
                   <div className="w-2 h-2 rounded-full bg-amber-400/30"></div>
